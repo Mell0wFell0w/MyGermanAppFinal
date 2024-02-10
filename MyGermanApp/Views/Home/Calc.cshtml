@@ -1,0 +1,108 @@
+﻿@{
+    ViewData["Title"] = "Calculator";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="~/js/site.js"></script>
+
+</head>
+<body>
+    <p>Some text</p>
+
+    <!-- Calculator Section-->
+    <section class="page-section" id="contact">
+        <div class="container">
+
+            <!-- Calculator Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Estimator</h2>
+
+            <!-- Icon Divider-->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+
+            <!-- Contact Section Form-->
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-xl-7">
+
+                    <form id="calculatorForm">
+                        <!-- Hours Input -->
+                        <div class="form-group">
+                            <label for="hoursInput">Hours:</label>
+                            <input type="number" class="form-control" id="hoursInput" placeholder="Enter hours">
+                        </div>
+                        <br />
+                        <p>Please enter just one or the other.</p>
+                        <br />
+                        <!-- Language Proficiency Level Dropdown -->
+                        <div class="form-group">
+                            <label for="proficiencyLevel">Language Proficiency Level:</label>
+                            <select class="form-control" id="proficiencyLevel">
+                                <option value="0">Select Level</option>
+                                <option value="A1">A1 (Lower Beginner)</option>
+                                <option value="A2">A2 (Upper Beginner)</option>
+                                <option value="B1">B1 (Lower Intermediate)</option>
+                                <option value="B2">B2 (Upper Intermediate)</option>
+                                <option value="C1">C1 (Lower Advanced)</option>
+                                <option value="C2">C2 (Upper Advanced/Fluent)</option>
+                            </select>
+                        </div>
+                        <!-- Submit Button -->
+                        <button type="button" class="btn btn-primary btn-xl" id="calculateButton">Calculate</button>
+                    </form>
+                    <!-- Display Results -->
+                    <div id="result" class="mt-4"></div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+@*     <script>
+        document.getElementById('calculateButton').addEventListener('click', function () {
+            var hours = document.getElementById('hoursInput').value;
+            var level = document.getElementById('proficiencyLevel').value;
+            var ratePerHour = 50; // Example rate per hour
+            var hoursPerLevel = {
+                A1: 100,
+                A2: 200,
+                B1: 300,
+                B2: 400,
+                C1: 500,
+                C2: 600
+            };
+            var resultText = '';
+
+            if (hours) {
+                // Calculate cost based on hours input
+                var cost = hours * ratePerHour;
+                resultText = `Estimated Cost: $${cost}`;
+            } else if (level && level !== '0') {
+                // Calculate cost based on proficiency level
+                var estimatedHours = hoursPerLevel[level];
+                var estimatedCost = estimatedHours * ratePerHour;
+                resultText = `Estimated Hours: ${estimatedHours}, Estimated Cost: $${estimatedCost}`;
+            } else {
+                resultText = 'Please enter hours or select a language proficiency level.';
+            }
+
+            document.getElementById('result').innerHTML = resultText;
+        });
+    </script> *@
+
+</body>
